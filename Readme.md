@@ -39,3 +39,14 @@ npm run dev
 # Postman Documentation
 
 [Postman Documentation](https://documenter.getpostman.com/view/33280052/2sB3BBpX2F)
+
+# Menjalankan prisma
+1. Jalankan
+```bash
+npx prisma db push
+```
+2. kemudian untuk manajemen database nya bisa buka
+```bash
+npx prisma studio
+```
+3. Buka browser dan buka http://localhost:5555
