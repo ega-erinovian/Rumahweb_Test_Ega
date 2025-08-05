@@ -1,10 +1,13 @@
 import { Router } from "express";
-import { getUserController } from "../controllers/users.controller";
-import { loginController } from "../controllers/auth.controller";
+import {
+  getUserController,
+  getUsersController,
+} from "../controllers/users.controller";
+import { verifyToken } from "../lib/jwt";
 
 const router = Router();
 
-router.get("/:uuid", getUserController);
-router.get("/:uuid", loginController);
+router.get("/", verifyToken, getUsersController);
+router.get("/:uuid", verifyToken, getUserController);
 
 export default router;
